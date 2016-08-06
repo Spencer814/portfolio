@@ -2,10 +2,10 @@ angular.module('PortfolioApp', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider){
   $routeProvider.when('/', {
-    templateUrl : 'views/home.html',
+    templateUrl : 'home.html',
   })
   .when('/work', {
-    templateUrl : 'views/work.html',
+    templateUrl : 'work.html',
   });
 }])
 
