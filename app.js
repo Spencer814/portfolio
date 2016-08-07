@@ -63,7 +63,7 @@ angular.module('PortfolioApp', ['ngRoute'])
     "title": "Mobile Apps with Ionic",
     "name": "Western Branch Academy",
     "img": "images/wba.jpg",
-    "text": "Homepage and mobile app for Western Branch Academy. I primarily used Angular bur I also used Ionic for the mobile and Bootstrap to make it more responsive on larger screens.",
+    "text": "App for Western Branch Academy. Built with Angular using Ionic Framework for a hybrid mobile app and Bootstrap to add responsive qualities for larger devices.",
     "demo": "https://spencer814.github.io/wba/www/#/wba/home",
     "code": "https://github.com/Spencer814/wba"
   }];
