@@ -1,33 +1,44 @@
-<div class="card work">
-  <div class="card-header projects">
-    <h3 class="card-title display-3">Projects</h3>
-  </div>
-  <div class="card-deck row m-x-auto">
-    <div ng-repeat="project in projects">
-      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 m-y-2">
-        <div class="card snippet">
-          <div class="card-header bg-inverse">
-            <h3 class="card-title">
-              <a target="_blank" href="{{project.code}}">{{project.name}}</a>
-            </h3>
-            <h3 class="card-subtitle">
-              <small>{{project.title}}</small>
-            </h3>
-          </div>
-          <div class="card-block {{project.class}}">
-            <a href="{{project.demo}}" target="_blank" class="btn btn-default" title="{{project.name}} image">
-              <img src="{{project.img}}?v=ngGGGlnQz9" sizes="100vw" alt="{{project.name}}" class="img-fluid w-100">
-            </a>
-            <p class="card-text">{{project.text}}</p>
-          </div>
-          <div class="card-footer text-xs-center bg-inverse">
-            <div class="d-inline-block">
-              <a target="_blank" href="{{project.code}}" role="button" class="btn btn-primary m-x-1" title="{{project.code}}"><p class="h5 m-b-0">Code</p></a>
-              <a target="_blank" href="{{project.demo}}" role="button" class="btn btn-primary m-x-1" title="{{project.demo}}"><p class="h5 m-b-0">Demo</p></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="work-header">
+	<div class="headings">
+		<h2>Projects</h2>
+	</div>
+	<nav>
+		<ul>
+			<li ng-repeat="project in projects">
+				<a class="box rotate navbar" href="#/work/#{{project.class}}">{{project.name}}</a>
+			</li>
+		</ul>
+	</nav>
 </div>
+<ul class="temp">
+	<li ng-repeat="project in projects">
+		<div class="summary {{project.class}}" id="project{{project.id}}">
+			<div class="content">
+				<a id="{{project.class}}">
+					<div class="text-box">
+						<h3 class="project-title">
+							<a target="_blank" href="{{project.code}}">{{project.name}}</a>
+						</h3>
+						<!-- <h4 class="subtitle">{{project.title}}</h4> -->
+					</div>
+					<div class="screenshot">
+						<a href="{{project.demo}}" target="_blank" title="{{project.name}} image">
+							<img src="{{project.img}}" alt="{{project.name}}">
+						</a>
+						<div class="text-box">
+							<p>{{project.text}}</p>
+						</div>
+					</div>
+				</a>
+				<ul>
+					<li>
+						<a class="box rotate" target="_blank" href="{{project.code}}" title="{{project.code}}">Code</a>
+					</li>
+					<li>
+						<a class="box rotate" target="_blank" href="{{project.demo}}" title="{{project.demo}}">Demo</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</li>
+</ul>
